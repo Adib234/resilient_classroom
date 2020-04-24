@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "580355621635",
+    "firebase_url": "https://resilient-classroom.firebaseio.com",
+    "project_id": "resilient-classroom",
+    "storage_bucket": "resilient-classroom.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580355621635:android:24a90ea853d73d753a9f36",
+        "android_client_info": {
+          "package_name": "akmadib.resilientclassroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580355621635-928rrj6f14kih685ad5q2v55j4mvh5qc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9b_kw_OSuuAFqKXAYKorUKF5AVQ5aVYE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "580355621635-928rrj6f14kih685ad5q2v55j4mvh5qc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
