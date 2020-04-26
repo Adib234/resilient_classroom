@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'student_screen.dart';
+import 'teacher_screen.dart';
+import 'package:resilientclassroom/misc/constants.dart';
 
 class WelcomeScreen extends StatefulWidget {
-  //static const String id = 'welcome_screen';
+  static const String id = 'welcome_screen';
+  static bool admin;
   @override
   _WelcomeScreenState createState() => _WelcomeScreenState();
 }
@@ -11,14 +15,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pinkAccent,
       body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("images/learning.jpg"),
-            fit: BoxFit.cover,
-          ),
-        ),
+        decoration: Constants.image,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -31,6 +29,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 Text(
                   "I am",
                   style: TextStyle(
+                    color: Colors.black,
                     fontSize: 43.0,
                     fontWeight: FontWeight.w900,
                   ),
@@ -43,14 +42,13 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                     totalRepeatCount: 100000000000,
                     text: ["AWESOME", "OPTIMISTIC", "RESILIENT"],
                     textStyle: TextStyle(
+                      color: Colors.black,
                       fontSize: 40.0,
                       fontFamily: "Oxygen",
                       fontWeight: FontWeight.bold,
                     ),
                     textAlign: TextAlign.start,
-                    alignment:
-                        AlignmentDirectional.topStart // or Alignment.topLeft
-                    ),
+                    alignment: AlignmentDirectional.topStart),
               ],
             ),
             Column(
@@ -59,11 +57,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   padding: EdgeInsets.symmetric(vertical: 16.0),
                   child: Material(
                     elevation: 5.0,
-                    color: Colors.lightBlueAccent,
+                    color: Colors.brown[300],
                     borderRadius: BorderRadius.circular(30.0),
                     child: MaterialButton(
+                      elevation: 10,
+                      hoverElevation: 30,
                       onPressed: () {
-                        //Go to login screen.
+                        Navigator.pushNamed(context, StudentScreen.id);
+                        WelcomeScreen.admin = false;
                       },
                       minWidth: 300.0,
                       height: 64.0,
@@ -79,12 +80,15 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 16.0),
                   child: Material(
-                    color: Colors.blueAccent,
+                    color: Colors.brown[600],
                     borderRadius: BorderRadius.circular(30.0),
                     elevation: 5.0,
                     child: MaterialButton(
+                      elevation: 10,
+                      hoverElevation: 30,
                       onPressed: () {
-                        //Go to registration screen.
+                        Navigator.pushNamed(context, TeacherScreen.id);
+                        WelcomeScreen.admin = true;
                       },
                       minWidth: 300.0,
                       height: 64.0,
