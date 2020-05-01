@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 
-class TeacherStream extends StatefulWidget {
-  static const String id = 'teacher_stream';
+class TeacherContainer extends StatefulWidget {
+  static const String id = 'teacher_container';
+  static const bool admin = true;
   @override
-  _TeacherStreamState createState() => _TeacherStreamState();
+  _TeacherContainerState createState() => _TeacherContainerState();
 }
 
-class _TeacherStreamState extends State<TeacherStream> {
+class _TeacherContainerState extends State<TeacherContainer> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }

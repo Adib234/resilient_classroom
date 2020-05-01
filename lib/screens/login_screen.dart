@@ -91,8 +91,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         Navigator.pushNamed(
                             context,
                             WelcomeScreen.admin
-                                ? TeacherStream.id
-                                : StudentStream.id);
+                                ? TeacherContainer.id
+                                : StudentContainer.id);
                       }
                     } catch (e) {
                       print(e);

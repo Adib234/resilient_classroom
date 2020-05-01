@@ -18,8 +18,8 @@ class Classroom extends StatelessWidget {
       StudentScreen.id: (context) => StudentScreen(),
       LoginScreen.id: (context) => LoginScreen(),
       RegistrationScreen.id: (context) => RegistrationScreen(),
-      StudentStream.id: (context) => StudentStream(),
-      TeacherStream.id: (context) => TeacherStream(),
+      StudentContainer.id: (context) => StudentContainer(),
+      TeacherContainer.id: (context) => TeacherContainer(),
     });
   }
 }
